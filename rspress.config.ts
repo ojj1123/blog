@@ -1,13 +1,23 @@
 import * as path from 'node:path';
 import { defineConfig } from 'rspress/config';
+import { pluginNodePolyfill } from '@rsbuild/plugin-node-polyfill'
 
 export default defineConfig({
+  globalStyles: path.join(__dirname, 'src/styles/index.css'),
   root: path.join(__dirname, 'docs'),
   title: 'Jeongjin.me',
   icon: '/rspress-icon.png',
   logo: {
     light: '/rspress-light-logo.png',
     dark: '/rspress-dark-logo.png',
+  },
+  builderConfig: {
+    plugins: [pluginNodePolyfill()],
+    resolve: {
+      alias: {
+        '@/components': './src/components'
+      }
+    }
   },
   themeConfig: {
     enableContentAnimation: true,
