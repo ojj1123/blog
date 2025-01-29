@@ -13,10 +13,10 @@
     "useDefineForClassFields": true,
     "allowImportingTsExtensions": true,
     "paths": {
-        "@/*": ["./src/*"]
-    },
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["docs", "theme", "rspress.config.ts"],
+  "include": ["docs", "theme", "rspress.config.ts", "./src/**/*.tsx"],
   "mdx": {
     "checkMdx": true
   }
