@@ -7,8 +7,8 @@ export default defineConfig({
   title: "Jeongjin.me",
   icon: "/rspress-icon.png",
   logo: {
-    light: "/rspress-light-logo.png",
-    dark: "/rspress-dark-logo.png",
+    light: "/logo-light.png",
+    dark: "/logo-dark.png",
   },
   builderConfig: {
     resolve: {
